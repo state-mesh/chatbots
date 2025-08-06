@@ -28,21 +28,29 @@
     overflow-y:hidden;
     overflow-x:hidden;
     min-height:0;
-    max-height: 575px;
-    height: 575px;
+      height:calc(100% - 56px);
+      max-height:calc(100% - 56px);
+  }
+  #overlay{
+    height:100vh;
+    width:100vw;
+    background:rgba(0, 0, 0, .5);
+    position:fixed;
+    top:0; left:0; bottom:0; right:0;
+    backdrop-filter: blur(10px);
   }
   .ant-list-items{display:none;}
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     #chat-popup {
       position: fixed;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      height: 90%;
       max-height: 100%;
-      border-radius: 0;
+      margin:auto;
     }
     .chat-body{
       height:calc(100% - 56px);
@@ -60,7 +68,8 @@
   
   // Inject the HTML
   chatWidgetContainer.innerHTML = `
-    <div id="chat-bubble" class="w-16 h-16 bg-gray-800 rounded-md flex items-center justify-center cursor-pointer text-3xl">
+    <div id="overlay" class="hidden"></div>
+    <div id="chat-bubble" class="w-16 h-16 bg-gray-800 rounded-md flex items-center justify-center cursor-pointer text-3xl relative">
       <svg width="35" height="35" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M32.4999 38.5937C30.1537 38.5957 27.8435 38.0163 25.7759 36.9073C23.7084 35.7983 21.9478 34.1942 20.6516 32.2385L24.0357 29.9891C24.9623 31.3858 26.2201 32.5314 27.6969 33.3239C29.1738 34.1164 30.8238 34.5312 32.4999 34.5312C34.176 34.5312 35.826 34.1164 37.3028 33.3239C38.7797 32.5314 40.0375 31.3858 40.9641 29.9891L44.3482 32.2385C43.052 34.1942 41.2914 35.7983 39.2238 36.9073C37.1563 38.0163 34.8461 38.5957 32.4999 38.5937Z" fill="white"/>
         <path d="M40.625 16.25C39.8215 16.25 39.0361 16.4882 38.368 16.9346C37.6999 17.381 37.1792 18.0155 36.8717 18.7578C36.5643 19.5001 36.4838 20.317 36.6406 21.105C36.7973 21.8931 37.1842 22.6169 37.7524 23.1851C38.3205 23.7532 39.0444 24.1401 39.8324 24.2969C40.6205 24.4536 41.4373 24.3732 42.1797 24.0657C42.922 23.7582 43.5565 23.2375 44.0028 22.5695C44.4492 21.9014 44.6875 21.1159 44.6875 20.3125C44.6928 19.7775 44.5913 19.2469 44.389 18.7516C44.1867 18.2563 43.8877 17.8064 43.5094 17.4281C43.1311 17.0498 42.6811 16.7508 42.1859 16.5485C41.6906 16.3462 41.16 16.2447 40.625 16.25Z" fill="white"/>
@@ -86,7 +95,7 @@
     </div>
 		<iframe
 		    src="https://app-ragflow-evhub-2q7ny.eu-central-1.statemesh.net/chat/share?shared_id=01cd49a65d6f11f0b1d5b6829c6a26b0&from=chat&auth=cwNDlkNGM0NWQ3MTExZjBhOGFjYjY4Mj&visible_avatar=1"
-		    style="width: 100%; height: 100%; man-height: 575px; min-height: 0;"
+		    style="width: 100%; height: 100%; max-height: 100%; min-height: 0;"
 		    frameborder="0">
 	    </iframe>
     </div>
@@ -98,6 +107,7 @@
 
   const chatBubble = document.getElementById('chat-bubble');
   const closePopup = document.getElementById('close-popup');
+  const popupOverlay = document.getElementById('overlay');
 
   chatBubble.addEventListener('click', function() {
     togglePopup();
@@ -106,11 +116,12 @@
   closePopup.addEventListener('click', function() {
     togglePopup();
   });
-
   function togglePopup() {
     const chatPopup = document.getElementById('chat-popup');
     chatPopup.classList.toggle('hidden');
-    chatBubble.classList.toggle('active')
+    chatBubble.classList.toggle('active');
+    popupOverlay.classList.toggle('hidden');
+    document.body.style.overflow = 'hidden';
     console.log('ok ', document.getElementById('iframe'));
   }
 })();
