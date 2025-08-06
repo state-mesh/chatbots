@@ -1,54 +1,113 @@
 <html>
-	<head>
-		<style>
-			.t-negative-50{
-				top:-50px;
-			}
-		</style>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<body>
-		<script src="https://mediu.s3.eu-central-1.amazonaws.com/chat-widget-lazar.js"></script>
-		<div class="bg-white">
-			<div class="bg-gray-900 pb-9">
-				<h1 class="text-center text-white uppercase py-8 text-7xl">Website</h1>
-			</div>
+<head>
+    <style>
+        .t-negative-35 {
+            top: -35px;
+        }
+        .py-big {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
 
-			<div class="bg-white max-w-4xl border border-gray-100 shadow-xl mx-auto self-center p-8 rounded-md relative t-negative-50">
-				<ul class="flex flex-wrap gap-4 text-gray-900 justify-end">
-					<li class="bg-gray-900 text-white rounded-md p-2">Acasa</li>
-					<li class="p-2">Noutati</li>
-					<li class="p-2">Proiecte</li>
-					<li class="p-2">Legislatie</li>
-					<li class="p-2">Contact</li>
-				</ul>
-				<div class="grid md:grid-cols-3 gap-6">
-					<div class="mt-8">
-						<h2 class="uppercase text-2xl mb-4">Lorem Ipsum</h2>
-						<p>Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice.</p>
-						<p class="my-2"> Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective.</p>
-						<p>Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia electronică practic neschimbată. A fost popularizată în anii '60 odată cu ieşirea colilor Letraset care conţineau pasaje Lorem Ipsum..</p>
-					</div>
-					<div class="mt-8 bg-gray-900 p-8 text-white rounded-md">
-						<h2 class="uppercase text-2xl mb-4">Lorem Ipsum</h2>
-						<p>Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice.</p>
-						<p class="mt-2"> Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective.</p>
-					</div>
-					<div class="mt-8">
-						<h2 class="uppercase text-2xl mb-4">Lorem Ipsum</h2>
-						<p>Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice.</p>
-						<p class="my-2"> Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective.</p>
-						<p>Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia electronică practic neschimbată. A fost popularizată în anii '60 odată cu ieşirea colilor Letraset care conţineau pasaje Lorem Ipsum, iar mai recent, prin programele de publicare pentru calculator.</p>
-					</div>
-				</div>
-			</div>
-			<ul class="flex flex-wrap gap-4 text-gray-900 justify-center">
-				<li class="bg-gray-900 text-white rounded-md p-2">Acasa</li>
-				<li class="p-2">Noutati</li>
-				<li class="p-2">Proiecte</li>
-				<li class="p-2">Legislatie</li>
-				<li class="p-2">Contact</li>
-			</ul>
-		</div>
-	</body>
+        .cover {
+            background-image: url('images/cover_image.png');
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            height: 40vh;
+            margin: 0;
+        }
+
+        .line {
+            background: #D30000;
+            height: 60px;
+            flex-grow: 1;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script src="https://mediu.s3.eu-central-1.amazonaws.com/chat-widget-lazar.js"></script>
+<div class="bg-white">
+    <div class="bg-gray-900 pb-9 cover">&nbsp;</div>
+    <div class="flex justify-center gap-1">
+        <div class="line grow mt-2 rounded-r-lg">&nbsp;</div>
+        <div class="logo text-center t-negative-35 relative">
+            <img src="images/Logo-elevi-LZR.png" class="w-full"/>
+        </div>
+        <div class="line mt-2 rounded-l-lg">&nbsp;</div>
+    </div>
+    <div class="bg-white max-w-6xl mx-auto self-center p-8">
+        <div class="lg:grid lg:grid-cols-7 gap-6">
+            <div class="col-span-3 mb-4 lg:mb-0">
+                <img src="images/img_1.png" class="w-full"/>
+            </div>
+            <div class="col-span-4 text-base">
+                <h2 class="text-4xl mb-4">Colegiul Național <b class="uppercase block">Gheorghe Lazăr</b></h2>
+                <p>La 18 ianuarie 1860, Alexandru Ioan Cuza a înființat al doilea gimnaziu cu predare în limba română
+                    din București și i-a dat numele lui Gheorghe Lazăr, care „a fost reîntemeietorul școlilor națiunii”.
+                    Aniversarea liceului a fost sărbătorită de atunci în fiecare an la această dată, când școala și-a
+                    deschis pentru prima dată porțile.</p>
+                <p class="mt-2">Decretul de înființare a liceului poartă semnătura regelui Carol I și data de 20 mai
+                    1890. În toamna anului 1890, a fost inaugurat noul sediu de lângă Grădinile Cișmigiu. Clădirea,
+                    proiectată de arhitectul F. G. Muntureanu, care studiase în Anglia, este o bijuterie arhitecturală
+                    de o sobrietate elegantă, îmbinând mai multe stiluri: de la cel brâncovenesc la cel neoclasic
+                    englez. Nu întâmplător Liceul Lazăr a fost comparat cu liceele pariziene din apropierea Jardin du
+                    Luxembourg.</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-gray-100">
+        <div class="max-w-6xl mx-auto self-center p-8">
+            <div class="lg:grid lg:grid-cols-2 gap-6">
+                <div class="mb-4 lg:mb-0">
+                    <p>La 18 ianuarie 1860, Alexandru Ioan Cuza a înființat al doilea gimnaziu cu predare în limba
+                        română din București și i-a dat numele lui Gheorghe Lazăr, care „a fost reîntemeietorul școlilor
+                        națiunii”. Aniversarea liceului a fost sărbătorită de atunci în fiecare an la această dată, când
+                        școala și-a deschis pentru prima dată porțile.</p>
+                    <p>Decretul de înființare a liceului poartă semnătura regelui Carol I și data de 20 mai
+                        1890. În toamna anului 1890, a fost inaugurat noul sediu de lângă Grădinile Cișmigiu. Clădirea,
+                        proiectată de arhitectul F. G. Muntureanu, care studiase în Anglia, este o bijuterie
+                        arhitecturală de o sobrietate elegantă, îmbinând mai multe stiluri: de la cel brâncovenesc la
+                        cel neoclasic englez. Nu întâmplător Liceul Lazăr a fost comparat cu liceele pariziene din
+                        apropierea Jardin du Luxembourg.</p>
+                </div>
+                <div>
+                    <img src="images/img_2.png" class="w-full"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white max-w-6xl mx-auto self-center p-8">
+        <div class="lg:grid lg:grid-cols-5 gap-6">
+            <div class="col-span-2 mb-4 lg:mb-0">
+                <img src="images/img_3.png" class="w-full"/>
+            </div>
+            <div class="col-span-3">
+                <h2 class="text-2xl mb-6">Absolvenți de seamă ai <b class="uppercase block">Colegiului Național Gheorghe
+                    Lazăr</b></h2>
+                <p>De-a lungul decadelor, Colegiul Național Gheorghe Lazăr a format numeroase personalități remarcabile
+                    care au influențat profund cultura, știința, politica și viața publică din România. Printre
+                    absolvenții de seamă se numără scriitori consacrați precum George Călinescu, Camil Petrescu, Tudor
+                    Vianu și Vasile Voiculescu, savanți și academicieni de renume precum Elie Carafoli, Aurel Babeș,
+                    Alexandru Proca și Gabriel Liiceanu, dar și artiști emblematici precum Liviu Ciulei, Dinu Lipatti,
+                    Florian Pittiș și Marcel Janco.</p>
+                <p class="my-2">Liceul i-a avut ca elevi și pe unii dintre cei mai influenți oameni politici și publici,
+                    precum Alexandru Athanasiu, Valeriu Stoica și George Simion, alături de gânditori și inovatori de
+                    excepție precum Ion Barbu (matematician și poet), Marius Nasta și Leon Lichtblau.</p>
+                <p>Această moștenire impresionantă confirmă rolul durabil al Colegiului Lazăr ca pilon al educației și
+                    vieții intelectuale românești.</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-black text-white py-big text-center relative mt-8">
+        <div class="logo text-center t-negative-35 absolute left-0 right-0 mx-auto">
+            <img class="mx-auto" src="images/Logo-elevi-LZR.png" width="70"/>
+        </div>
+        <p class="text-xs">© C.N. LAZAR 2025. Toate drepturile rezervate asupra textelor si fotografiilor din acest
+            site.</p>
+        <p class="text-xs">Colegiul Național Gheorghe Lazăr</p>
+    </div>
+</div>
+</body>
 </html>

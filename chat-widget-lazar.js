@@ -10,6 +10,9 @@
   .active{
     background:#000;
   }
+  .no-scroll {
+    overflow: hidden;
+  }
   #chat-widget-container {
     position: fixed;
     bottom: 20px;
@@ -108,6 +111,7 @@
   const chatBubble = document.getElementById('chat-bubble');
   const closePopup = document.getElementById('close-popup');
   const popupOverlay = document.getElementById('overlay');
+  const body = document.body;
 
   chatBubble.addEventListener('click', function() {
     togglePopup();
@@ -121,7 +125,7 @@
     chatPopup.classList.toggle('hidden');
     chatBubble.classList.toggle('active');
     popupOverlay.classList.toggle('hidden');
-    document.body.style.overflow = 'hidden';
+    body.classList.toggle('no-scroll');
     console.log('ok ', document.getElementById('iframe'));
   }
 })();
